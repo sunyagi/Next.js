@@ -1,0 +1,28 @@
+# Copy to config.yaml and adjust. Any key left out uses the default in fvg_bot/config.py.
+
+symbol: XAUUSD            # some brokers use XAUUSD.r, GOLD, etc.
+lot_size: 0.01
+contract_size: 100        # oz per 1.00 lot -> 0.01 lot = 1 oz = $1 per $1 move
+account_size: 150
+
+risk_reward: 2.0
+max_risk_pct: 5.0         # $7.50 max loss per trade on $150 -> stop must be <= $7.50 away
+min_stop_distance: 1.00
+stop_buffer: 0.30
+max_trades_per_day: 3
+max_daily_loss_pct: 10.0  # stop for the day after -$15
+
+trend_ema_period: 50
+trend_slope_lookback: 5
+swing_strength: 2
+
+setup_fvg_min_size: 1.00
+setup_lookback_bars: 48
+
+entry_fvg_min_size: 0.20
+max_entry_bars_after_tap: 30
+
+session_timezone: America/New_York
+sessions:
+  - {name: asia, start: "19:00", end: "03:00"}
+  - {name: new_york, start: "08:00", end: "17:00"}
